@@ -1,0 +1,13 @@
+apiVersion: v1alpha
+kind: imagerunner
+sauce:
+region: us-west-1
+suites:
+  - name: run sauce test
+    image: lsimity/photontest:0.0.3
+    entrypoint: "sh -c 'cd workdir/photon; npx wdio wdio.conf.js'"
+    artifacts:
+      - "/path/inside/container/file.log"
+    env:
+      SAUCE_USERNAME: laszlo.simity
+      SAUCE_ACCESS_KEY: 075e23a0-ccfa-4996-bf45-6c5d88580936
