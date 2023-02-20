@@ -1,10 +1,7 @@
 FROM node:current-alpine
-
-
-
-
-
-WORKDIR /demo-python
-COPY test-requirements.txt /demo-python
-RUN pip install -r test-requirements.txt
-COPY ./tests/ /demo-python/tests/
+#ADD ./workdir/photon
+#WORKDIR ./workdir/photon
+#RUN git clone https://github.com/laszlosimity/phototests.git ./workdir/photon
+#RUN cd ./workdir/photon
+#RUN npm install
+#ENTRYPOINT ["npx wdio.conf.js"]
